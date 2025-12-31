@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevLinks - Ademir</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <img
+          id="avatar"
+          src="./assets/ademirtm.jpg"
+          alt="Foto de Ademir criança"
+        />
+        <p>@AdemirCampos</p>
+      </div>
+
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/@FOFAGEM/shorts" target="_blank"
+            >Inscreva-se no meu canal de IA</a
+          >
+        </li>
+        <li>
+          <a href="https://wa.me/3493134517" target="_blank">Meu Whatsapp</a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/ademir_camposjunior"
+            target="_blank"
+            >Me siga no Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ava3.uniube.br/programas/curriculo/curriculoPdf.php"
+            target="_blank"
+            >Meu processo Engenharia</a
+          >
+        </li>
+      </ul>
+
+      <div id="social-links">
+        <a href="https://github.com" target="_blank"
+          ><ion-icon name="logo-github"></ion-icon
+        ></a>
+        <a href="https://instagram.com/ademir_camposjunior" target="_blank"
+          ><ion-icon name="logo-instagram"></ion-icon
+        ></a>
+        <a href="https://youtube.com/@FOFAGEM" target="_blank"
+          ><ion-icon name="logo-youtube"></ion-icon
+        ></a>
+        <a href="https://linkedin.com" target="_blank"
+          ><ion-icon name="logo-linkedin"></ion-icon
+        ></a>
+      </div>
+
+      <footer>
+        Feito com ♥ pela
+        <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>
+      </footer>
+    </div>
+
+    <script>
+      function toggleMode() {
+        const html = document.documentElement
+        html.classList.toggle("light")
+
+        const img = document.querySelector("#profile img")
+
+        if (html.classList.contains("light")) {
+          // Nome EXATO conforme sua pasta assets no VS Code: avatar-light-mobile.jpg
+          img.setAttribute("src", "./assets/avatar-light-mobile.jpg")
+          img.setAttribute("alt", "Foto de Ademir e sua companheira")
+        } else {
+          // Foto de criança que já funciona
+          img.setAttribute("src", "./assets/ademirtm.jpg")
+          img.setAttribute("alt", "Foto de Ademir criança")
+        }
+      }
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
